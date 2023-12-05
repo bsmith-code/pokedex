@@ -1,70 +1,37 @@
-# Front End Interview Project
+# Front End Assessment
+Please get it back to us within 72 hours if possible. If you have any questions please let us know.
 
-Hello! If you're reading this, that means you've passed our initial phone screen. Congrats! We're excited to get to know
-you more and see if you'd be a good fit for Real.
+## Overview
 
-We would like you to implement the following project to help us assess your real-world programming knowledge.
+This project should take approximately 2+ hours to complete and help PrizePicks assess your front end knowledge and development style.
 
-## The Project
+If you find the project takes longer than you’d like please submit a functional version of what you have. We're interested in assessing a functioning project even if all of the business requirements are not implemented.
 
-We're going to create an application that uses the public Github API to render Github users and display information
-about their account.
+## The Problem
+Ash and his friends are on a new adventure to catch even more Pokemon! Before they set off on this journey they need some tools. As we all know every great Pokemon trainer needs a reliable Pokedex to identify Pokemon. It’s a good thing they have you! Ash has asked if you would be willing to build him a brand new Pokedex with core features and a couple of enhancements.
 
-The application will consist of two pages:
+## Business Requirements
+Please attempt to implement the following business requirements:
+- Use the Pokemon API to make API requests for data https://pokeapi.co/docs/v2.
+- Able to search for any Pokemon.
+- Able to see a history of what has been searched and revisit at anytime.
 
-1. A Home Page, where I can see a list of users.
-2. A User detail page, where I can view specific information for a user.
+## Technical Requirements
+The following technical requirements must be met:
+- You are allowed to use scaffolding technology like “Create React App” or similar.
+- This project should be done with the latest React framework.
+- This project should be done with the latest Redux framework.
+- This project should be done using TypeScript.
+- This project should be done using version control, preferably git.
+- This project can be styled with SCSS/CSS or Styled Components if anything needs to be styled.
+- This project should include a README that addresses anything you may not have completed. It should also address what additional changes you might need to make if the application were intended to run in a concurrent environment. Any other comments or thoughts about the project are also welcome.
 
-The home page will query the [users](https://api.github.com/users) endpoint and render each user. We should:
+## Bonus Points
+- Able to see details about abilities, moves, species, sprites and types upon searching.
+- Able to see other evolutions of Pokemon and be able to navigate to specific Pokemon in the evolution chain.
+- A sleek and intuitive layout that resembles a Pokedex.
+- Automated tests that ensure the business logic implemented is correct.
 
-- show their avatar
-- show their username
 
-When I click on a user, I will be taken to a dedicated user detail page. On that page, I should see:
-
-- their repos, which is the main content of the page.
-- their organizations
-- their first 5 followers, and include a count of total followers.
-
-Github provides a rate limit for API users without authentication to a max of 60 requests per hour. You may want to mock
-the response or use a personal access token to fetch the API.
-
-We have provided you with a **create-react-app** template project, however, please feel free to use whatever
-technologies / frameworks / libraries that you are most comfortable with. We just ask that **this be implemented in
-React**, and not in another framework, like Vue/Angular/Ember/etc.
-
-**Note:** Please add tests! The project will be considered incomplete if you do not have any tests written.
-
-## What are we looking for?
-
-Some questions to think about:
-
-- How can you make your code reusable?
-- How can we adhere to proper separation of concerns?
-- Are we using modern development practices?
-- Is my page mobile responsive?
-
-We would also like to consider the following:
-
-- How can I make it easy for any engineer to create a detail page?
-- How can I handle error cases, like 404s, automatically?
-- All in all: **how can I construct the beginnings of a _system_ that will make other engineers' lives easier?**
-
-## Your Submission
-
-After you have implemented the two pages, please write an overview of what you have implemented, what were any tradeoffs
-you made, and how you would extend this if you had more time. Please include this in the OVERVIEW.md file.
-
-## Conclusion
-
-Please feel free to reach out to the recruiter if you have any questions or if anything is unclear. We're excited to see
-what you come up with! Good luck!
-## License
-
-At CodeScreen, we strongly value the integrity and privacy of our assessments. As a result, this repository is under exclusive copyright, which means you **do not** have permission to share your solution to this test publicly (i.e., inside a public GitHub/GitLab repo, on Reddit, etc.). <br>
-
-## Submitting your solution
-
-Please push your changes to the `main branch` of this repository. You can push one or more commits. <br>
-
-Once you are finished with the task, please click the `Submit Solution` link on <a href="https://app.codescreen.com/candidate/2ef49a30-07f4-47e5-a247-7aa77409332f" target="_blank">this screen</a>.
+## Submission Requirements
+Submit a link to a hosted git repository or tarball of the git repository of the finished project to the submission link. In addition, Please email the link to the recruiter.
