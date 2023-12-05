@@ -1,17 +1,25 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
+import { IPokemon, IPokemonRequest } from 'types'
+
 const api = createApi({
   reducerPath: 'api',
 
   baseQuery: fetchBaseQuery({
-    baseUrl: process.env.REACT_APP_GITHUB_BASE_URL
+    baseUrl: process.env.REACT_APP_API_BASE_URL
   }),
   endpoints: build => ({
-    // getUsers: build.query<IUser[], void>({
-    //   query: () => 'users',
-    //   providesTags: ['IUser']
-    // }),
+    getPokemon: build.query<IPokemonRequest, void>({
+      query: () => 'pokemon'
+    })
   })
 })
 
-export const { util, reducer, endpoints, middleware, reducerPath } = api
+export const {
+  util,
+  reducer,
+  endpoints,
+  middleware,
+  reducerPath,
+  useGetPokemonQuery
+} = api

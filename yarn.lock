@@ -1650,6 +1650,15 @@
     "@types/scheduler" "*"
     csstype "^3.0.2"
 
+"@types/react@^16.8.3":
+  version "16.14.52"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.14.52.tgz#d6c31c3f69cf6ae10718d0a07a2ef6f2ebafc490"
+  integrity sha512-4+ZN73hgRW3Gang3QMqWjrqPPkf+lWZYiyG4uXtUbpd+7eiBDw6Gemila6rXDd8DorADupTiIERL6Mb5BQTF2w==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
 "@types/scheduler@*":
   version "0.16.2"
   resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
@@ -6173,6 +6182,13 @@ url-parse@^1.5.3:
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
+
+use-hooks@^2.0.0-rc.5:
+  version "2.0.0-rc.5"
+  resolved "https://registry.yarnpkg.com/use-hooks/-/use-hooks-2.0.0-rc.5.tgz#05bdfb89cf088ef49961858b529d090a15f48680"
+  integrity sha512-85OzZPao3Rk6GFJqaeTHRj5MluTFhzDxUikwytiwJYGR4+2tEeH86Ym1DMDM6NzJ3bwueaX7kc+rlF/5J074TA==
+  dependencies:
+    "@types/react" "^16.8.3"
 
 use-sync-external-store@^1.0.0:
   version "1.2.0"

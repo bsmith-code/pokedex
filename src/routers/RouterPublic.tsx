@@ -12,7 +12,10 @@ const PreparedView = ({ view }: IProps) => <LayoutDefault>{view}</LayoutDefault>
 const RouterPublic = () => (
   <BrowserRouter>
     <Routes>
-      <Route index element={<PreparedView view={<ViewHome />} />} />
+      <Route
+        path="/pokemon?/:name?"
+        element={<PreparedView view={<ViewHome />} />}
+      />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   </BrowserRouter>
