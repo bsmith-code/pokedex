@@ -27,4 +27,4 @@ export const flattenChain = (chain?: IChainLink) => {
 }
 
 export const getPokemonSprite = (id: string | number) =>
-  `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`
+  `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`

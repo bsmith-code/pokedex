@@ -10,7 +10,9 @@ export const useChangePokemon = () => {
 
   const handleChangePokemon = (name: string) => {
     if (name) {
-      const preparedSearches = Array.from(new Set([...searchHistory, name]))
+      const preparedSearches = searchHistory.includes(name)
+        ? searchHistory
+        : [name, ...searchHistory]
 
       saveSearchHistory(preparedSearches)
       navigate(`/pokemon/${name}`)

@@ -1,6 +1,3 @@
-import { useMemo, useState } from 'react'
-import { INamedApiResource } from 'pokeapi-typescript'
-
 import {
   Box,
   Grid,
@@ -12,7 +9,7 @@ import {
 
 import { usePokemonContext } from 'context/PokemonContext'
 
-import { getPokemonSprite } from 'utils'
+import { getIdFromUrl, getPokemonSprite } from 'utils'
 
 const StyledGridItem = styled(ListItemButton)`
   flex-direction: column;
@@ -32,14 +29,31 @@ export const GridPokemon = () => {
   return (
     <Box mt={4}>
       <Grid container spacing={2}>
-        {paginatedPokemon.map(({ name }, idx) => (
-          <Grid item xs={12} sm={6} md={4} lg={3} key={`pokemon-grid-${name}`}>
-            <StyledGridItem onClick={() => handleChangePokemon(name)}>
-              <img alt={name} src={getPokemonSprite((idx + 1) * currentPage)} />
-              <Typography>{name}</Typography>
-            </StyledGridItem>
-          </Grid>
-        ))}
+        {paginatedPokemon.map(({ url, name }) => {
+          const imageSrc = getPokemonSprite(getIdFromUrl(url))
+
+          return (
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              md={4}
+              lg={3}
+              key={`pokemon-grid-${name}`}
+            >
+              <StyledGridItem onClick={() => handleChangePokemon(name)}>
+                <img
+                  alt={name}
+                  src={imageSrc}
+                  width="120px"
+                  height="120px"
+                  style={{ objectFit: 'contain' }}
+                />
+                <Typography>{name}</Typography>
+              </StyledGridItem>
+            </Grid>
+          )
+        })}
       </Grid>
       <Box mt={6} display="flex" justifyContent="center">
         <Pagination

@@ -38,7 +38,13 @@ export const GridEvolution = ({ evolutions, isFetching }: IProps) => {
             return (
               <Grid item xs={12} sm={6} md={6} lg={4} key={`evolution-${name}`}>
                 <StyledGridItem onClick={() => handleChangePokemon(name)}>
-                  <img alt={name} src={getPokemonSprite(id)} />
+                  <img
+                    alt={name}
+                    src={getPokemonSprite(id)}
+                    width="120px"
+                    height="120px"
+                    style={{ objectFit: 'contain' }}
+                  />
                   <Typography variant="subtitle2">{name}</Typography>
                 </StyledGridItem>
               </Grid>

@@ -36,7 +36,7 @@ export const DetailsPokemon = () => {
         <Box flexShrink={0} position="relative">
           <IconButton
             onClick={handleGoBack}
-            sx={{ position: 'absolute', top: '16px', left: 0 }}
+            sx={{ position: 'absolute', top: 0, left: 0 }}
           >
             <ArrowBackIcon />
           </IconButton>
