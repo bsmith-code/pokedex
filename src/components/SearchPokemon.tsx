@@ -1,5 +1,3 @@
-import { INamedApiResource } from 'pokeapi-typescript'
-
 import {
   Autocomplete,
   createFilterOptions,
@@ -7,14 +5,10 @@ import {
   TextField
 } from '@mui/material'
 
-import { useChangePokemon } from 'hooks/useChangePokemon'
+import { usePokemonContext } from 'context/PokemonContext'
 
-interface IProps {
-  pokemon: INamedApiResource<void>[]
-}
-
-export const SearchPokemon = ({ pokemon }: IProps) => {
-  const { handleChangePokemon } = useChangePokemon()
+export const SearchPokemon = () => {
+  const { pokemon, handleChangePokemon } = usePokemonContext()
 
   return (
     <Autocomplete

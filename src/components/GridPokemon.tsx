@@ -10,15 +10,9 @@ import {
   Typography
 } from '@mui/material'
 
-import { useChangePokemon } from 'hooks/useChangePokemon'
+import { usePokemonContext } from 'context/PokemonContext'
 
 import { getPokemonSprite } from 'utils'
-
-interface IProps {
-  pokemon: INamedApiResource<void>[]
-}
-
-const count = 20
 
 const StyledGridItem = styled(ListItemButton)`
   flex-direction: column;
@@ -26,27 +20,19 @@ const StyledGridItem = styled(ListItemButton)`
   border: 1px solid #efefef;
 `
 
-export const GridPokemon = ({ pokemon }: IProps) => {
-  const { handleChangePokemon } = useChangePokemon()
-  const [currentPage, setCurrentPage] = useState(1)
-
-  const handleChangePage = (page: number) => {
-    setCurrentPage(page)
-  }
-
-  const gridPage = currentPage - 1 // Grid is zero based
-  const startIndex = gridPage * count
-  const endIndex = startIndex + count
-
-  const preparedPokemon = useMemo(
-    () => pokemon.slice(startIndex, endIndex),
-    [pokemon, startIndex, endIndex]
-  )
+export const GridPokemon = () => {
+  const {
+    pokemon,
+    currentPage,
+    paginatedPokemon,
+    handleChangePage,
+    handleChangePokemon
+  } = usePokemonContext()
 
   return (
     <Box mt={4}>
       <Grid container spacing={2}>
-        {preparedPokemon.map(({ name }, idx) => (
+        {paginatedPokemon.map(({ name }, idx) => (
           <Grid item xs={12} sm={6} md={4} lg={3} key={`pokemon-grid-${name}`}>
             <StyledGridItem onClick={() => handleChangePokemon(name)}>
               <img alt={name} src={getPokemonSprite((idx + 1) * currentPage)} />
@@ -58,7 +44,7 @@ export const GridPokemon = ({ pokemon }: IProps) => {
       <Box mt={6} display="flex" justifyContent="center">
         <Pagination
           page={currentPage}
-          count={Math.floor(pokemon.length / count)}
+          count={Math.floor(pokemon.length / 20)}
           onChange={(_, page) => handleChangePage(page)}
         />
       </Box>

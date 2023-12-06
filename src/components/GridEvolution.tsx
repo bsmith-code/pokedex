@@ -2,11 +2,12 @@ import { IEvolutionChain } from 'pokeapi-typescript'
 
 import { Box, Grid, ListItemButton, styled, Typography } from '@mui/material'
 
-import { useChangePokemon } from 'hooks/useChangePokemon'
+import { usePokemonContext } from 'context/PokemonContext'
 
 import { flattenChain, getIdFromUrl, getPokemonSprite } from 'utils'
 
 interface IProps {
+  isFetching: boolean
   evolutions?: IEvolutionChain
 }
 
@@ -21,11 +22,11 @@ const StyledGridItem = styled(ListItemButton)(({ theme }) => ({
   }
 }))
 
-export const GridEvolution = ({ evolutions }: IProps) => {
-  const { handleChangePokemon } = useChangePokemon()
+export const GridEvolution = ({ evolutions, isFetching }: IProps) => {
+  const { handleChangePokemon } = usePokemonContext()
   const flattenedChain = flattenChain(evolutions?.chain)
 
-  return (
+  return !isFetching ? (
     <Box>
       <Typography variant="h6" sx={{ mb: 2 }}>
         Evolutions
@@ -48,5 +49,7 @@ export const GridEvolution = ({ evolutions }: IProps) => {
         <Typography>No available evolutions</Typography>
       )}
     </Box>
+  ) : (
+    <Typography>Loading...</Typography>
   )
 }

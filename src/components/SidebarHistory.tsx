@@ -1,9 +1,9 @@
 import { Box, List, ListItemButton, Paper, Typography } from '@mui/material'
 
-import { useChangePokemon } from 'hooks/useChangePokemon'
+import { usePokemonContext } from 'context/PokemonContext'
 
 export const SidebarHistory = () => {
-  const { searchHistory, handleChangePokemon } = useChangePokemon()
+  const { searchHistory, handleChangePokemon } = usePokemonContext()
 
   return (
     <Box
