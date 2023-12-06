@@ -13,7 +13,7 @@ const RouterPublic = () => (
   <BrowserRouter>
     <Routes>
       <Route
-        path="/pokemon?/:name?"
+        path="/pokemon?/:pokemonName?"
         element={<PreparedView view={<ViewHome />} />}
       />
       <Route path="*" element={<Navigate to="/" replace />} />

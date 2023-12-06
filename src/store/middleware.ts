@@ -7,7 +7,7 @@ import {
 
 import { createNotification } from 'store/client'
 
-import { TAppListenerAPI, TAppStartListening } from 'types'
+import { TAppListenerAPI, TAppStartListening } from 'types/redux'
 
 export const exceptionListener = {
   matcher: isRejected,

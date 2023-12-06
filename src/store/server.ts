@@ -1,6 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-
-import { IPokemon, IPokemonRequest } from 'types'
+import { INamedApiResourceList, IPokemon } from 'pokeapi-typescript'
 
 const api = createApi({
   reducerPath: 'api',
@@ -9,8 +8,14 @@ const api = createApi({
     baseUrl: process.env.REACT_APP_API_BASE_URL
   }),
   endpoints: build => ({
-    getPokemon: build.query<IPokemonRequest, void>({
-      query: () => 'pokemon'
+    getPokemon: build.query<
+      INamedApiResourceList<{ name: string; url: string }>,
+      void
+    >({
+      query: () => 'pokemon-species?limit=-1'
+    }),
+    getPokemonDetails: build.query<IPokemon, string>({
+      query: name => `pokemon/${name}`
     })
   })
 })
@@ -21,5 +26,6 @@ export const {
   endpoints,
   middleware,
   reducerPath,
-  useGetPokemonQuery
+  useGetPokemonQuery,
+  useGetPokemonDetailsQuery
 } = api
