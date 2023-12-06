@@ -7,7 +7,7 @@ import {
   TextField
 } from '@mui/material'
 
-import { useChangePokemon } from 'hooks/useSelectPokemon'
+import { useChangePokemon } from 'hooks/useChangePokemon'
 
 interface IProps {
   pokemon: INamedApiResource<void>[]

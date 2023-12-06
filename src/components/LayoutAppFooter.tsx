@@ -10,7 +10,7 @@ const LayoutAppFooter = () => {
       sx={{ bgcolor: 'primary.main', justifyContent: 'center' }}
     >
       <Typography color="#fff">
-        &copy; PrizePicks, {year}. All Rights Reserved.
+        &copy; Brian Matthew Smith, {year}. All Rights Reserved.
       </Typography>
     </Toolbar>
   )

@@ -10,7 +10,9 @@ import {
   Typography
 } from '@mui/material'
 
-import { useChangePokemon } from 'hooks/useSelectPokemon'
+import { useChangePokemon } from 'hooks/useChangePokemon'
+
+import { getPokemonSprite } from 'utils'
 
 interface IProps {
   pokemon: INamedApiResource<void>[]
@@ -41,18 +43,13 @@ export const GridPokemon = ({ pokemon }: IProps) => {
     [pokemon, startIndex, endIndex]
   )
 
-  const getPokemonSprite = (id: number) =>
-    `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
-      (id + 1) * currentPage
-    }.png`
-
   return (
     <Box mt={4}>
       <Grid container spacing={2}>
         {preparedPokemon.map(({ name }, idx) => (
           <Grid item xs={12} sm={6} md={4} lg={3} key={`pokemon-grid-${name}`}>
             <StyledGridItem onClick={() => handleChangePokemon(name)}>
-              <img alt={name} src={getPokemonSprite(idx)} />
+              <img alt={name} src={getPokemonSprite((idx + 1) * currentPage)} />
               <Typography>{name}</Typography>
             </StyledGridItem>
           </Grid>

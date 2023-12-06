@@ -1,5 +1,10 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { INamedApiResourceList, IPokemon } from 'pokeapi-typescript'
+import {
+  IEvolutionChain,
+  INamedApiResourceList,
+  IPokemon,
+  IPokemonSpecies
+} from 'pokeapi-typescript'
 
 const api = createApi({
   reducerPath: 'api',
@@ -12,10 +17,16 @@ const api = createApi({
       INamedApiResourceList<{ name: string; url: string }>,
       void
     >({
-      query: () => 'pokemon-species?limit=-1'
+      query: () => 'pokemon?limit=-1'
     }),
     getPokemonDetails: build.query<IPokemon, string>({
       query: name => `pokemon/${name}`
+    }),
+    getPokemonSpecies: build.query<IPokemonSpecies, string>({
+      query: name => `pokemon-species/${name}`
+    }),
+    getPokemonEvolution: build.query<IEvolutionChain, string>({
+      query: chainId => `evolution-chain/${chainId}`
     })
   })
 })
@@ -27,5 +38,7 @@ export const {
   middleware,
   reducerPath,
   useGetPokemonQuery,
-  useGetPokemonDetailsQuery
+  useGetPokemonSpeciesQuery,
+  useGetPokemonDetailsQuery,
+  useGetPokemonEvolutionQuery
 } = api
