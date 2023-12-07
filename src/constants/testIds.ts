@@ -1,5 +1,6 @@
 export const TESTID_SEARCH_EMPTY = 'search-empty'
 export const TESTID_SEARCH_HISTORY = 'search-history'
+export const TESTID_SEARCH_POKEMON = 'search-pokemon'
 
 export const TESTID_DETAILS_ERROR = 'details-error'
 export const TESTID_DETAILS_LOADING = 'details-loading'
