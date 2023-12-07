@@ -11,10 +11,11 @@ export const SidebarHistory = () => {
     <Box
       px={4}
       py={3}
-      flexShrink={0}
+      flexShrink={1}
       flexBasis={300}
       component={Paper}
       bgcolor="grey.200"
+      sx={{ '@media (max-width: 767px)': { order: 2, flexGrow: 1 } }}
     >
       <Typography variant="subtitle2">Search History</Typography>
 

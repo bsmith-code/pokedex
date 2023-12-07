@@ -48,8 +48,13 @@ export const DetailsPokemon = () => {
 
   return (
     <>
-      <Box display="flex" mt={2} data-testid={TESTID_DETAILS_POKEMON}>
-        <Box flexShrink={0} position="relative">
+      <Box
+        mt={2}
+        display="flex"
+        flexWrap="wrap"
+        data-testid={TESTID_DETAILS_POKEMON}
+      >
+        <Box position="relative">
           <IconButton
             onClick={handleGoBack}
             data-testid={TESTID_DETAILS_RETURN}
@@ -62,7 +67,7 @@ export const DetailsPokemon = () => {
             src={sprites?.other?.['official-artwork']?.front_default ?? ''}
           />
         </Box>
-        <Box p={2} flexGrow={1}>
+        <Box p={2} flexGrow={1} flexBasis="400px">
           <Box mb={2}>
             <Typography component="h1" variant="h4">
               {name}

@@ -13,10 +13,17 @@ const ViewHome = () => {
   const { pokemonName = '' } = useParams()
 
   return (
-    <Box display="flex" alignItems="flex-start">
+    <Box display="flex" flexWrap="wrap" alignItems="flex-start">
       <PokemonContextProvider>
         <SidebarHistory />
-        <Box flexGrow={1} ml={4}>
+        <Box
+          ml={4}
+          flexGrow={1}
+          flexBasis={372}
+          sx={{
+            '@media (max-width: 767px)': { ml: 0, mb: 4, flexBasis: 'auto' }
+          }}
+        >
           <SearchPokemon />
           {pokemonName ? <DetailsPokemon /> : <GridPokemon />}
         </Box>
