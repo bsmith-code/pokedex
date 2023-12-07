@@ -63,7 +63,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.spec.js'],
+      files: ['*.spec.jsx'],
       rules: {
         'no-undef': 'off'
       }

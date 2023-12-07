@@ -11,6 +11,12 @@ import { usePokemonContext } from 'context/PokemonContext'
 
 import { getIdFromUrl, getPokemonSprite } from 'utils'
 
+import {
+  TESTID_GRID_ERROR,
+  TESTID_GRID_LOADING,
+  TESTID_GRID_POKEMON
+} from 'constants/testIds'
+
 const StyledGridItem = styled(ListItemButton)`
   flex-direction: column;
   border-radius: 4px;
@@ -22,12 +28,22 @@ export const GridPokemon = () => {
     pokemon,
     currentPage,
     paginatedPokemon,
+    isErrorPokemon,
+    isFetchingPokemon,
     handleChangePage,
     handleChangePokemon
   } = usePokemonContext()
 
+  if (isFetchingPokemon) {
+    return <div data-testid={TESTID_GRID_LOADING}>Loading...</div>
+  }
+
+  if (!pokemon.length || isErrorPokemon) {
+    return <div data-testid={TESTID_GRID_ERROR}>Pokemon unavailable.</div>
+  }
+
   return (
-    <Box mt={4}>
+    <Box mt={4} data-testid={TESTID_GRID_POKEMON}>
       <Grid container spacing={2}>
         {paginatedPokemon.map(({ url, name }) => {
           const imageSrc = getPokemonSprite(getIdFromUrl(url))

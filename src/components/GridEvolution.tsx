@@ -6,6 +6,8 @@ import { usePokemonContext } from 'context/PokemonContext'
 
 import { flattenChain, getIdFromUrl, getPokemonSprite } from 'utils'
 
+import { TESTID_GRID_EVOLUTIONS, TESTID_GRID_LOADING } from 'constants/testIds'
+
 interface IProps {
   isFetching: boolean
   evolutions?: IEvolutionChain
@@ -27,7 +29,7 @@ export const GridEvolution = ({ evolutions, isFetching }: IProps) => {
   const flattenedChain = flattenChain(evolutions?.chain)
 
   return !isFetching ? (
-    <Box>
+    <Box data-testid={TESTID_GRID_EVOLUTIONS}>
       <Typography variant="h6" sx={{ mb: 2 }}>
         Evolutions
       </Typography>
@@ -56,6 +58,6 @@ export const GridEvolution = ({ evolutions, isFetching }: IProps) => {
       )}
     </Box>
   ) : (
-    <Typography>Loading...</Typography>
+    <Typography data-testid={TESTID_GRID_LOADING}>Loading...</Typography>
   )
 }

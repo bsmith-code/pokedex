@@ -1,6 +1,5 @@
 import React, { ReactElement, ReactNode } from 'react'
 import { Provider } from 'react-redux'
-import { BrowserRouter } from 'react-router-dom'
 import { mockServer } from '__mocks__/server'
 import { createSerializer } from '@emotion/jest'
 import { render } from '@testing-library/react'
@@ -20,9 +19,7 @@ global.customRender = (ui: ReactElement, options = {}) =>
     wrapper: ({ children }: { children: ReactNode }) => (
       <Provider store={store}>
         <SnackbarProvider>
-          <ThemeProvider theme={lightTheme}>
-            <BrowserRouter>{children}</BrowserRouter>
-          </ThemeProvider>
+          <ThemeProvider theme={lightTheme}>{children}</ThemeProvider>
         </SnackbarProvider>
       </Provider>
     ),

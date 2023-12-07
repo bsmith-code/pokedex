@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailsPokemon renders correctly while loading 1`] = `
+<div>
+  <div
+    data-testid="details-loading"
+  >
+    Loading...
+  </div>
+</div>
+`;
+
+exports[`DetailsPokemon renders correctly with data 1`] = `
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+    data-testid="details-pokemon"
+  >
+    <div
+      class="MuiBox-root emotion-1"
+    >
+      <button
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium emotion-2"
+        data-testid="details-return"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-3"
+          data-testid="ArrowBackIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+          />
+        </svg>
+      </button>
+      <img
+        alt="mock-pokemon #0001"
+        src="https://mockPokeApi.com/sprites/pokemon/other/official-artwork/1"
+      />
+    </div>
+    <div
+      class="MuiBox-root emotion-4"
+    >
+      <div
+        class="MuiBox-root emotion-5"
+      >
+        <h1
+          class="MuiTypography-root MuiTypography-h4 emotion-6"
+        >
+          mock-pokemon #0001
+        </h1>
+        <p
+          class="MuiTypography-root MuiTypography-body1 emotion-7"
+        >
+          species: 
+          Mock Species
+        </p>
+      </div>
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root emotion-8"
+      >
+        <div
+          class="MuiCardHeader-root emotion-9"
+        >
+          <div
+            class="MuiCardHeader-content emotion-10"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title emotion-11"
+            >
+              Abilities
+            </span>
+          </div>
+        </div>
+        <div
+          class="MuiCardContent-root emotion-12"
+        >
+          mock-ability-0, mock-ability-1, mock-ability-2, mock-ability-3, mock-ability-4, mock-ability-5, mock-ability-6, mock-ability-7, mock-ability-8, mock-ability-9, mock-ability-10, mock-ability-11, mock-ability-12, mock-ability-13, mock-ability-14, mock-ability-15, mock-ability-16, mock-ability-17, mock-ability-18, mock-ability-19
+        </div>
+      </div>
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root emotion-8"
+      >
+        <div
+          class="MuiCardHeader-root emotion-9"
+        >
+          <div
+            class="MuiCardHeader-content emotion-10"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title emotion-11"
+            >
+              Moves
+            </span>
+          </div>
+        </div>
+        <div
+          class="MuiCardContent-root emotion-12"
+        >
+          mock-move-0, mock-move-1, mock-move-2, mock-move-3, mock-move-4, mock-move-5, mock-move-6, mock-move-7, mock-move-8, mock-move-9, mock-move-10, mock-move-11, mock-move-12, mock-move-13, mock-move-14, mock-move-15, mock-move-16, mock-move-17, mock-move-18, mock-move-19
+        </div>
+      </div>
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root emotion-8"
+      >
+        <div
+          class="MuiCardHeader-root emotion-9"
+        >
+          <div
+            class="MuiCardHeader-content emotion-10"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title emotion-11"
+            >
+              Types
+            </span>
+          </div>
+        </div>
+        <div
+          class="MuiCardContent-root emotion-12"
+        >
+          mock-type-0, mock-type-1, mock-type-2, mock-type-3, mock-type-4, mock-type-5, mock-type-6, mock-type-7, mock-type-8, mock-type-9, mock-type-10, mock-type-11, mock-type-12, mock-type-13, mock-type-14, mock-type-15, mock-type-16, mock-type-17, mock-type-18, mock-type-19
+        </div>
+      </div>
+    </div>
+  </div>
+  <p
+    class="MuiTypography-root MuiTypography-body1 emotion-23"
+    data-testid="grid-loading"
+  >
+    Loading...
+  </p>
+</div>
+`;
+
+exports[`DetailsPokemon renders correctly with invalid data 1`] = `
+<div>
+  <div
+    data-testid="details-error"
+  >
+    Invalid Pokemon.
+  </div>
+</div>
+`;

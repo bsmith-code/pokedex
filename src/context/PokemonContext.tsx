@@ -6,14 +6,16 @@ import { useGetPokemonQuery } from 'store/server'
 import { useChangePokemon } from 'hooks/useChangePokemon'
 import { usePagination } from 'hooks/usePagination'
 
-type IPokemonList = INamedApiResource<{ name: string; url: string }>[]
-interface IPokemonContext {
+export type IPokemonList = INamedApiResource<{ name: string; url: string }>[]
+export interface IPokemonContext {
   pokemon: IPokemonList
   currentPage: number
   searchHistory: string[]
   handleChangePage: (page: number) => void
   handleChangePokemon: (name: string) => void
   paginatedPokemon: IPokemonList
+  isErrorPokemon: boolean
+  isFetchingPokemon: boolean
 }
 
 export const PokemonContext = createContext({} as IPokemonContext)
@@ -22,9 +24,14 @@ interface IProps {
   children: ReactNode
 }
 export const PokemonContextProvider = ({ children }: IProps) => {
-  const { pokemon } = useGetPokemonQuery(undefined, {
-    selectFromResult: ({ data }) => ({
-      pokemon: data?.results ?? []
+  const {
+    pokemon,
+    isError: isErrorPokemon,
+    isFetching: isFetchingPokemon
+  } = useGetPokemonQuery(undefined, {
+    selectFromResult: ({ data, ...restResult }) => ({
+      pokemon: data?.results ?? [],
+      ...restResult
     })
   })
   const { list, currentPage, handleChangePage } = usePagination(pokemon)
@@ -35,6 +42,8 @@ export const PokemonContextProvider = ({ children }: IProps) => {
       pokemon,
       currentPage,
       searchHistory,
+      isErrorPokemon,
+      isFetchingPokemon,
       handleChangePage,
       handleChangePokemon,
       paginatedPokemon: list
@@ -44,6 +53,8 @@ export const PokemonContextProvider = ({ children }: IProps) => {
       pokemon,
       currentPage,
       searchHistory,
+      isErrorPokemon,
+      isFetchingPokemon,
       handleChangePage,
       handleChangePokemon
     ]

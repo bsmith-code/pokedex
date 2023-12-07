@@ -2,6 +2,8 @@ import { Box, List, ListItemButton, Paper, Typography } from '@mui/material'
 
 import { usePokemonContext } from 'context/PokemonContext'
 
+import { TESTID_SEARCH_EMPTY, TESTID_SEARCH_HISTORY } from 'constants/testIds'
+
 export const SidebarHistory = () => {
   const { searchHistory, handleChangePokemon } = usePokemonContext()
 
@@ -17,7 +19,7 @@ export const SidebarHistory = () => {
       <Typography variant="subtitle2">Search History</Typography>
 
       {searchHistory.length ? (
-        <List>
+        <List data-testid={TESTID_SEARCH_HISTORY}>
           {searchHistory.map(name => (
             <ListItemButton
               component="li"
@@ -29,7 +31,9 @@ export const SidebarHistory = () => {
           ))}
         </List>
       ) : (
-        <Typography sx={{ mt: 2 }}>No previous searches.</Typography>
+        <Typography data-testid={TESTID_SEARCH_EMPTY} sx={{ mt: 2 }}>
+          No previous searches.
+        </Typography>
       )}
     </Box>
   )

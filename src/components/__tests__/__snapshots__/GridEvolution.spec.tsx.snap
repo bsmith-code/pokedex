@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GridEvolution renders correctly while loading 1`] = `
+<div>
+  <p
+    class="MuiTypography-root MuiTypography-body1 emotion-0"
+    data-testid="grid-loading"
+  >
+    Loading...
+  </p>
+</div>
+`;
+
+exports[`GridEvolution renders correctly with data 1`] = `
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+    data-testid="grid-evolutions"
+  >
+    <h6
+      class="MuiTypography-root MuiTypography-h6 emotion-1"
+    >
+      Evolutions
+    </h6>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 emotion-2"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 emotion-3"
+      >
+        <div
+          class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters emotion-4"
+          role="button"
+          tabindex="0"
+        >
+          <img
+            alt="mock-species"
+            height="120px"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+            style="object-fit: contain;"
+            width="120px"
+          />
+          <h6
+            class="MuiTypography-root MuiTypography-subtitle2 emotion-5"
+          >
+            mock-species
+          </h6>
+          <span
+            class="MuiTouchRipple-root emotion-6"
+          />
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 emotion-3"
+      >
+        <div
+          class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters emotion-4"
+          role="button"
+          tabindex="0"
+        >
+          <img
+            alt="mock-species-2"
+            height="120px"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"
+            style="object-fit: contain;"
+            width="120px"
+          />
+          <h6
+            class="MuiTypography-root MuiTypography-subtitle2 emotion-5"
+          >
+            mock-species-2
+          </h6>
+          <span
+            class="MuiTouchRipple-root emotion-6"
+          />
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 emotion-3"
+      >
+        <div
+          class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters emotion-4"
+          role="button"
+          tabindex="0"
+        >
+          <img
+            alt="mock-species-3"
+            height="120px"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png"
+            style="object-fit: contain;"
+            width="120px"
+          />
+          <h6
+            class="MuiTypography-root MuiTypography-subtitle2 emotion-5"
+          >
+            mock-species-3
+          </h6>
+          <span
+            class="MuiTouchRipple-root emotion-6"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

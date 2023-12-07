@@ -13,10 +13,13 @@ import { addLeadingZeros, getIdFromUrl } from 'utils'
 export const usePokemonDetails = () => {
   const { pokemonName = '' } = useParams()
 
-  const { data: pokemonDetails, isFetching: isFetchingDetails } =
-    useGetPokemonDetailsQuery(pokemonName, {
-      skip: !pokemonName
-    })
+  const {
+    data: pokemonDetails,
+    isFetching: isFetchingDetails,
+    isError: isErrorDetails
+  } = useGetPokemonDetailsQuery(pokemonName, {
+    skip: !pokemonName
+  })
 
   const { id, name, moves, types, sprites, abilities, species } =
     pokemonDetails ?? ({} as IPokemon)
@@ -62,6 +65,7 @@ export const usePokemonDetails = () => {
 
   return {
     sprites,
+    isErrorDetails,
     isFetchingDetails,
     name: preparedName,
     details: preparedCards,

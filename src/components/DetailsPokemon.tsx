@@ -14,6 +14,13 @@ import { usePokemonDetails } from 'hooks/usePokemonDetails'
 
 import { GridEvolution } from 'components/GridEvolution'
 
+import {
+  TESTID_DETAILS_ERROR,
+  TESTID_DETAILS_LOADING,
+  TESTID_DETAILS_POKEMON,
+  TESTID_DETAILS_RETURN
+} from 'constants/testIds'
+
 export const DetailsPokemon = () => {
   const {
     name,
@@ -21,6 +28,7 @@ export const DetailsPokemon = () => {
     sprites,
     evolutions,
     speciesName,
+    isErrorDetails,
     isFetchingDetails,
     isFetchingEvolutions
   } = usePokemonDetails()
@@ -30,19 +38,28 @@ export const DetailsPokemon = () => {
     navigate('/')
   }
 
-  return !isFetchingDetails ? (
+  if (isFetchingDetails) {
+    return <div data-testid={TESTID_DETAILS_LOADING}>Loading...</div>
+  }
+
+  if (isErrorDetails) {
+    return <div data-testid={TESTID_DETAILS_ERROR}>Invalid Pokemon.</div>
+  }
+
+  return (
     <>
-      <Box display="flex" mt={2}>
+      <Box display="flex" mt={2} data-testid={TESTID_DETAILS_POKEMON}>
         <Box flexShrink={0} position="relative">
           <IconButton
             onClick={handleGoBack}
+            data-testid={TESTID_DETAILS_RETURN}
             sx={{ position: 'absolute', top: 0, left: 0 }}
           >
             <ArrowBackIcon />
           </IconButton>
           <img
             alt={name}
-            src={sprites.other['official-artwork'].front_default}
+            src={sprites?.other?.['official-artwork']?.front_default ?? ''}
           />
         </Box>
         <Box p={2} flexGrow={1}>
@@ -70,7 +87,5 @@ export const DetailsPokemon = () => {
         isFetching={isFetchingEvolutions}
       />
     </>
-  ) : (
-    <div>Loading...</div>
   )
 }

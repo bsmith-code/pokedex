@@ -1,0 +1,240 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SidebarHistory renders correctly WITH data 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiBox-root emotion-0"
+  >
+    <h6
+      class="MuiTypography-root MuiTypography-subtitle2 emotion-1"
+    >
+      Search History
+    </h6>
+    <ul
+      class="MuiList-root MuiList-padding emotion-2"
+      data-testid="search-history"
+    >
+      <li
+        class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters emotion-3"
+        role="button"
+        tabindex="0"
+      >
+        Search 0
+        <span
+          class="MuiTouchRipple-root emotion-4"
+        />
+      </li>
+      <li
+        class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters emotion-3"
+        role="button"
+        tabindex="0"
+      >
+        Search 1
+        <span
+          class="MuiTouchRipple-root emotion-4"
+        />
+      </li>
+      <li
+        class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters emotion-3"
+        role="button"
+        tabindex="0"
+      >
+        Search 2
+        <span
+          class="MuiTouchRipple-root emotion-4"
+        />
+      </li>
+      <li
+        class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters emotion-3"
+        role="button"
+        tabindex="0"
+      >
+        Search 3
+        <span
+          class="MuiTouchRipple-root emotion-4"
+        />
+      </li>
+      <li
+        class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters emotion-3"
+        role="button"
+        tabindex="0"
+      >
+        Search 4
+        <span
+          class="MuiTouchRipple-root emotion-4"
+        />
+      </li>
+      <li
+        class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters emotion-3"
+        role="button"
+        tabindex="0"
+      >
+        Search 5
+        <span
+          class="MuiTouchRipple-root emotion-4"
+        />
+      </li>
+      <li
+        class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters emotion-3"
+        role="button"
+        tabindex="0"
+      >
+        Search 6
+        <span
+          class="MuiTouchRipple-root emotion-4"
+        />
+      </li>
+      <li
+        class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters emotion-3"
+        role="button"
+        tabindex="0"
+      >
+        Search 7
+        <span
+          class="MuiTouchRipple-root emotion-4"
+        />
+      </li>
+      <li
+        class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters emotion-3"
+        role="button"
+        tabindex="0"
+      >
+        Search 8
+        <span
+          class="MuiTouchRipple-root emotion-4"
+        />
+      </li>
+      <li
+        class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters emotion-3"
+        role="button"
+        tabindex="0"
+      >
+        Search 9
+        <span
+          class="MuiTouchRipple-root emotion-4"
+        />
+      </li>
+      <li
+        class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters emotion-3"
+        role="button"
+        tabindex="0"
+      >
+        Search 10
+        <span
+          class="MuiTouchRipple-root emotion-4"
+        />
+      </li>
+      <li
+        class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters emotion-3"
+        role="button"
+        tabindex="0"
+      >
+        Search 11
+        <span
+          class="MuiTouchRipple-root emotion-4"
+        />
+      </li>
+      <li
+        class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters emotion-3"
+        role="button"
+        tabindex="0"
+      >
+        Search 12
+        <span
+          class="MuiTouchRipple-root emotion-4"
+        />
+      </li>
+      <li
+        class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters emotion-3"
+        role="button"
+        tabindex="0"
+      >
+        Search 13
+        <span
+          class="MuiTouchRipple-root emotion-4"
+        />
+      </li>
+      <li
+        class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters emotion-3"
+        role="button"
+        tabindex="0"
+      >
+        Search 14
+        <span
+          class="MuiTouchRipple-root emotion-4"
+        />
+      </li>
+      <li
+        class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters emotion-3"
+        role="button"
+        tabindex="0"
+      >
+        Search 15
+        <span
+          class="MuiTouchRipple-root emotion-4"
+        />
+      </li>
+      <li
+        class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters emotion-3"
+        role="button"
+        tabindex="0"
+      >
+        Search 16
+        <span
+          class="MuiTouchRipple-root emotion-4"
+        />
+      </li>
+      <li
+        class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters emotion-3"
+        role="button"
+        tabindex="0"
+      >
+        Search 17
+        <span
+          class="MuiTouchRipple-root emotion-4"
+        />
+      </li>
+      <li
+        class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters emotion-3"
+        role="button"
+        tabindex="0"
+      >
+        Search 18
+        <span
+          class="MuiTouchRipple-root emotion-4"
+        />
+      </li>
+      <li
+        class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters emotion-3"
+        role="button"
+        tabindex="0"
+      >
+        Search 19
+        <span
+          class="MuiTouchRipple-root emotion-4"
+        />
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`SidebarHistory renders correctly WITHOUT data 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiBox-root emotion-0"
+  >
+    <h6
+      class="MuiTypography-root MuiTypography-subtitle2 emotion-1"
+    >
+      Search History
+    </h6>
+    <p
+      class="MuiTypography-root MuiTypography-body1 emotion-2"
+      data-testid="search-empty"
+    >
+      No previous searches.
+    </p>
+  </div>
+</div>
+`;
