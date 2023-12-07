@@ -1,3 +1,46 @@
+## Getting Started
+
+Follow these instructions to set up and run the project on your local machine.
+
+### Prerequisites
+
+- Node.js: Make sure you have Node.js installed. You can download it from [https://nodejs.org/](https://nodejs.org/).
+- Yarn. Make sure you have yarn installed. ```npm i -g yarn```
+
+### Installation
+
+1. Clone the repository: ```git clone https://github.com/bsmith-code/prize-picks```
+2. Install node modules: ```yarn```
+
+### Scripts
+- Development: ```yarn start```
+  - This will open the application in your default web browser. You can view the project at http://localhost:3000.
+- Production: ```yarn build```
+  - This will generate a dist folder containing the optimized and minified build.
+- Testing: ```yarn test```
+  - This will execute the test suite and provide information on any test failures.
+
+### Incomplete items
+1. Implement husky for pre-commit and pre-push hooks (linting and tests).
+2. Better exception handling.
+3. Better mocks for tests.
+4. Better loading states.
+5. Integration and e2e tests.
+6. Grid filtering when searching for pokemon.
+7. Set search value to pokemon URL param when choosing a pokemon from the grid.
+8. Local storage event listener for multi-tab support.
+9. Implement error boundaries.
+
+### Concurrent Environment
+Running a React app in a concurrent environment typically refers to leveraging React's Concurrent Mode, which is a set of new features that help React applications stay responsive and gracefully adjust to different levels of priority and concurrency. Concurrent Mode allows React to work on multiple tasks simultaneously, making the user experience smoother and more responsive.
+
+Here are the key concepts and steps involved in running a React app in a concurrent environment:
+1. Enabling concurrent mode.
+2. Use concurrent features such as Suspense and useTransition.
+3. Utilize time slicing to break down large units of work into smaller chunks.
+4. Error boundaries and retry logic.
+
+
 # Front End Assessment
 Please get it back to us within 72 hours if possible. If you have any questions please let us know.
 
