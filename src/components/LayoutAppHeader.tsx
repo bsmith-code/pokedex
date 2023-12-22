@@ -1,25 +1,29 @@
 import { useNavigate } from 'react-router-dom'
 
-import { IconButton, Toolbar } from '@mui/material'
+import { Button, Divider, Toolbar, Typography } from '@mui/material'
 
 const LayoutAppHeader = () => {
   const navigate = useNavigate()
 
-  const handleLogoClick = () => {
+  const handleClickLogo = () => {
     navigate('/')
   }
 
   return (
-    <Toolbar component="header" sx={{ bgcolor: 'primary.main' }}>
-      <IconButton onClick={handleLogoClick}>
-        <img
-          alt="PrizePicks"
-          src="/assets/logo.svg"
-          width="140px"
-          height="auto"
-        />
-      </IconButton>
-    </Toolbar>
+    <>
+      <Toolbar component="header" sx={{ bgcolor: 'secondary.main' }}>
+        <Button onClick={handleClickLogo}>
+          <Typography
+            variant="subtitle1"
+            color="primary"
+            sx={{ fontWeight: 800 }}
+          >
+            Brian M. Smith
+          </Typography>
+        </Button>
+      </Toolbar>
+      <Divider />
+    </>
   )
 }
 

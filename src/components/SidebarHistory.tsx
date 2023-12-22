@@ -14,7 +14,7 @@ export const SidebarHistory = () => {
       flexShrink={1}
       flexBasis={300}
       component={Paper}
-      bgcolor="grey.200"
+      bgcolor="secondary.main"
       sx={{ '@media (max-width: 767px)': { order: 2, flexGrow: 1 } }}
     >
       <Typography variant="subtitle2">Search History</Typography>

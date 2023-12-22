@@ -9,12 +9,15 @@ Follow these instructions to set up and run the project on your local machine.
 
 ### Installation
 
-1. Clone the repository: ```git clone https://github.com/bsmith-code/prize-picks```
+1. Clone the repository: ```git clone https://github.com/bsmith-code/pokedex```
 2. Install node modules: ```yarn```
+
+### Hosts
+1. Add ```127.0.0.1 pokedex.brianmatthewsmith.local``` to your /etc/hosts file
 
 ### Scripts
 - Development: ```yarn start```
-  - This will open the application in your default web browser. You can view the project at http://localhost:3000.
+  - This will open the application in your default web browser. You can view the project at http://pokedex.brianmatthewsmith.local:3004.
 - Production: ```yarn build```
   - This will generate a dist folder containing the optimized and minified build.
 - Testing: ```yarn test```

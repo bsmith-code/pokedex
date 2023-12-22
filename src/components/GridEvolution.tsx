@@ -18,9 +18,9 @@ const StyledGridItem = styled(ListItemButton)(({ theme }) => ({
   borderRadius: '4px',
   color: '#fff',
   padding: theme.spacing(4),
-  backgroundColor: theme.palette.secondary.main,
+  backgroundColor: theme.palette.primary.main,
   '&:hover': {
-    backgroundColor: '#6704c9'
+    backgroundColor: '#4f9edf'
   }
 }))
 

@@ -79,7 +79,7 @@ export const DetailsPokemon = () => {
           {details.map(({ title, content }) => (
             <Card
               key={`details-${title}`}
-              sx={{ bgcolor: 'secondary.main', color: 'common.white', mb: 2 }}
+              sx={{ bgcolor: 'primary.main', color: 'common.white', mb: 2 }}
             >
               <CardHeader title={title} />
               <CardContent>{content}</CardContent>
