@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { useLocalStorage } from 'use-hooks'
+import { useLocalStorage } from '@uidotdev/usehooks'
 
 export const useChangePokemon = () => {
   const navigate = useNavigate()
